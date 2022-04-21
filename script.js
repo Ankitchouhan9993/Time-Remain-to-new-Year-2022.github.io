@@ -1,6 +1,6 @@
 function Callme(){
-    const newyear= new Date("1 jan 2022");
    const currenttime=new Date();
+    const newyear=new Date(`1 jan ${currenttime.getYear()+1}`);
    const differ=newyear-currenttime;
    const days= Math.floor(differ/(1000*60*60*24));
    const hours=Math.floor(differ/1000/60/60-days*24);
