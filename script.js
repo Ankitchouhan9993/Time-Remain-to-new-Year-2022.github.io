@@ -3,8 +3,8 @@ function Callme(){
     const newyear=new Date(`${currenttime.getFullYear()+1}-01-01`);
    const differ=newyear-currenttime;
    const days= Math.floor(differ/(1000*60*60*24));
-   const hours=Math.floor(differ/1000/60/60-days*24);
-   const minutes=Math.floor((differ/1000/60-(days*24*60))-hours*60);
+   const hours=Math.floor(differ/(1000*60*60)-days*24);
+   const minutes=Math.floor((differ/(1000*60)-(days*24*60))-hours*60);
    const seconds=Math.floor(differ/1000-(days*24*60*60)-hours*60*60-minutes*60);
    updateData(days,hours,minutes,seconds);
 }
